@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#07111f" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="Portfolio 200K" />
+<title>Portfolio 200K Command Center</title>
+<style>
+:root{
+  --bg:#07111f; --panel:#0d1a2d; --panel2:#11223a; --line:#213756;
+  --text:#eef5ff; --muted:#8fa6bf; --green:#2ed6a1; --red:#ff6b81;
+  --amber:#f6c85f; --blue:#62a8ff; --cyan:#30d5ff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:linear-gradient(180deg,#07111f 0%,#0a1422 100%);
+  color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Arial,sans-serif;
+}
+.wrap{max-width:980px;margin:0 auto;padding:18px 14px 100px}
+.header{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:14px}
+.title{font-size:28px;font-weight:800;letter-spacing:-.5px}
+.sub{color:var(--muted);font-size:13px;margin-top:4px}
+.badge{padding:8px 10px;border-radius:12px;background:#122944;border:1px solid var(--line);font-size:12px;color:#cfe2ff;white-space:nowrap}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.card{
+  background:linear-gradient(180deg,var(--panel2),var(--panel));
+  border:1px solid var(--line);border-radius:18px;padding:14px;box-shadow:0 10px 30px rgba(0,0,0,.22)
+}
+.kpi .v{font-size:24px;font-weight:800;line-height:1.1}.kpi .l{color:var(--muted);font-size:11px;margin-top:6px}
+.progress{height:10px;background:#0a1525;border:1px solid var(--line);border-radius:99px;overflow:hidden;margin-top:10px}
+.progress > span{display:block;height:100%;width:6.2%;background:linear-gradient(90deg,var(--cyan),var(--green))}
+.section{margin-top:16px}
+.section h2{font-size:16px;margin:0 0 10px}
+.signal{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:10px}
+.signal b{font-size:13px}.signal p{font-size:12px;color:#c7d5e6;line-height:1.45;margin:8px 0 0}
+.green{color:var(--green)} .amber{color:var(--amber)} .red{color:var(--red)} .blue{color:var(--blue)}
+.table{width:100%;border-collapse:collapse;font-size:12px;overflow:hidden;border-radius:14px}
+.table th{color:#a9bdd4;text-align:left;background:#10233a;padding:10px;border-bottom:1px solid var(--line)}
+.table td{padding:10px;border-bottom:1px solid #18304c;background:#0c192a}
+.table tr:last-child td{border-bottom:0}
+.tag{display:inline-block;padding:4px 7px;border-radius:999px;font-size:10px;font-weight:700;border:1px solid currentColor}
+.alert{display:flex;gap:10px;align-items:flex-start;padding:12px;border:1px solid #294567;border-radius:14px;background:#0b1a2b;margin-bottom:8px}
+.alert .dot{width:9px;height:9px;border-radius:50%;margin-top:5px;background:var(--amber);box-shadow:0 0 18px rgba(246,200,95,.8)}
+.small{color:var(--muted);font-size:11px;line-height:1.45}
+.sticky{
+  position:fixed;left:0;right:0;bottom:0;background:rgba(5,13,24,.94);backdrop-filter:blur(14px);
+  border-top:1px solid var(--line);padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+}
+.sticky .inner{max-width:980px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.btn{padding:10px 12px;border-radius:12px;background:#102844;border:1px solid var(--line);font-size:12px;color:#dceaff}
+@media(max-width:760px){
+  .grid4{grid-template-columns:repeat(2,1fr)}
+  .signal{grid-template-columns:1fr}
+  .title{font-size:24px}
+  .table{font-size:11px}
+  .table th,.table td{padding:8px 7px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="header">
+    <div>
+      <div class="title">Portfolio 200K</div>
+      <div class="sub">Command Center • CFD portfolio • iPhone dashboard</div>
+    </div>
+    <div class="badge">Ultimo update: 21/08/2026 • chiusura USA</div>
+  </div>
+
+  <div class="grid4">
+    <div class="card kpi"><div class="v">€12.395,78</div><div class="l">Capitale a rischio baseline</div></div>
+    <div class="card kpi"><div class="v">€200.000</div><div class="l">Target 31/12/2027</div></div>
+    <div class="card kpi"><div class="v">6,2%</div><div class="l">Progresso nominale</div><div class="progress"><span></span></div></div>
+    <div class="card kpi"><div class="v amber">ALTO</div><div class="l">Rischio leva/correlazione</div></div>
+  </div>
+
+  <div class="section">
+    <h2>Executive signal</h2>
+    <div class="signal">
+      <div class="card">
+        <b class="green">METALLI • BULLISH</b>
+        <p>Gold e Silver restano il blocco più forte del portafoglio. Leva elevata: proteggere i profitti se la struttura tecnica si deteriora.</p>
+      </div>
+      <div class="card">
+        <b class="amber">TECH / AI • CAUTO</b>
+        <p>Fondamentali AI solidi, ma Treasury lunghi elevati comprimono i multipli. Earnings NVIDIA = evento chiave della prossima settimana.</p>
+      </div>
+      <div class="card">
+        <b class="red">GEOPOLITICA • RISCHIO ALTO</b>
+        <p>Iran/Hormuz e sanzioni USA possono muovere oil, inflation expectations, Treasury, Gold/Silver e Nasdaq.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Portafoglio monitorato</h2>
+    <div class="card" style="padding:0;overflow:hidden">
+      <table class="table">
+        <thead><tr><th>Cluster</th><th>Asset</th><th>Bias</th><th>Azione</th></tr></thead>
+        <tbody>
+          <tr><td>Metalli</td><td>XAU / XAG / SLV / RING</td><td><span class="tag green">BULLISH</span></td><td>HOLD / protect profits</td></tr>
+          <tr><td>AI / Semi</td><td>NVDA / AMD / MU / SOXX / AVGO / ASML / AMAT / KLAC / MRVL / SMCI</td><td><span class="tag amber">CAUTO</span></td><td>Selective hold</td></tr>
+          <tr><td>Indice</td><td>Nasdaq 100</td><td><span class="tag amber">NEUTRAL+</span></td><td>No aggressive add pre-event</td></tr>
+          <tr><td>Quantum</td><td>RGTI / IONQ</td><td><span class="tag red">HIGH BETA</span></td><td>Protect gains / selective</td></tr>
+          <tr><td>Space</td><td>RKLB</td><td><span class="tag green">BULLISH</span></td><td>Hold / trim spikes</td></tr>
+          <tr><td>Energy</td><td>LNG / CCJ / IREN / EOSE</td><td><span class="tag blue">TACTICAL</span></td><td>Monitor catalysts</td></tr>
+          <tr><td>Biotech</td><td>BMEA / BNTX / CRSP / PODD / USNA</td><td><span class="tag amber">SELECTIVE</span></td><td>Event-driven</td></tr>
+          <tr><td>Global ETFs</td><td>IVV / URTH / IEMG / AIA / EWT / EZA / ITA</td><td><span class="tag blue">DIVERSIFY</span></td><td>Hold / rebalance</td></tr>
+          <tr><td>Other</td><td>PLTR / TEM / INTC / HPE / AAPL / LCID / APPS / ATUS / BLMN</td><td><span class="tag amber">MIXED</span></td><td>Asset-by-asset review</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Risk & leverage</h2>
+    <div class="grid4">
+      <div class="card kpi"><div class="v">20×</div><div class="l">Gold</div></div>
+      <div class="card kpi"><div class="v">10×</div><div class="l">Silver</div></div>
+      <div class="card kpi"><div class="v">5×</div><div class="l">Azioni / ETF</div></div>
+      <div class="card kpi"><div class="v">20×</div><div class="l">Indici</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Live alerts / prossimi catalyst</h2>
+    <div class="alert"><div class="dot"></div><div><b>NVIDIA earnings • 26 agosto</b><div class="small">Evento binario per NVDA e, indirettamente, Nasdaq + semiconduttori.</div></div></div>
+    <div class="alert"><div class="dot"></div><div><b>Fed / Treasury regime</b><div class="small">Monitorare 2Y, 10Y, 30Y, DXY e dati inflazione/lavoro per segnali di cambio regime.</div></div></div>
+    <div class="alert"><div class="dot"></div><div><b>Gold / Silver</b><div class="small">Bias positivo; target strutturali monitorati: Gold 5.500 $, Silver 120 $.</div></div></div>
+  </div>
+
+  <div class="section">
+    <h2>Ultime modifiche note</h2>
+    <div class="card">
+      <div class="small">
+        • Prelievo: 100 $<br>
+        • RKLB: vendute 80 @ 71,45 $, poi acquistate 75 @ 73 $<br>
+        • IONQ: vendute 20 @ 45,02 $, poi acquistate 4 @ 44,88 $<br>
+        • PLTR: vendute 3 @ 179,82 $<br>
+        • HPE: vendute 6 @ 53,51 $<br>
+        • Nasdaq 100: +0,13 @ 29.336,84<br>
+        • INTC: +3 @ 90,07 $<br>
+        • ASML: +0,1 @ 1.765,40 $<br>
+        • Gold: +0,3 @ 4.623,20 $
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Metodo</h2>
+    <div class="card small">
+      Questa dashboard è un file HTML statico aggiornabile. Nei prossimi update sostituirò baseline, prezzi, segnali, news, TP/SL, prese di profitto e nuove opportunità sulla base delle analisi del momento. Per quotazioni e valore portafoglio userò dati correnti verificati; se un prezzo non è affidabile verrà indicato come non disponibile.
+    </div>
+  </div>
+</div>
+
+<div class="sticky">
+  <div class="inner">
+    <div>
+      <b style="font-size:13px">Baseline</b>
+      <span style="margin-left:6px;color:var(--green);font-weight:800">€12.395,78</span>
+    </div>
+    <div class="btn">Portfolio 200K • v1</div>
+  </div>
+</div>
+</body>
+</html>
